@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dream Wave Solutions</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -16,40 +16,40 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #0b1220, #05070f);
-      color: white;
-      overflow-x: hidden;
+      background: #070A12;
+      color: #E5E7EB;
+      line-height: 1.6;
     }
 
     /* NAV */
-    header {
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 18px 10%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 10%;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      backdrop-filter: blur(10px);
-      background: rgba(10, 15, 25, 0.6);
+      background: rgba(10, 12, 20, 0.6);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
       z-index: 1000;
     }
 
-    header h1 {
-      font-size: 18px;
+    .logo {
+      font-weight: 700;
       color: #38bdf8;
       letter-spacing: 1px;
     }
 
-    nav a {
-      color: #cbd5e1;
+    .nav a {
       margin-left: 20px;
       text-decoration: none;
+      color: #9CA3AF;
       font-size: 14px;
-      transition: 0.3s;
     }
 
-    nav a:hover {
+    .nav a:hover {
       color: #38bdf8;
     }
 
@@ -62,10 +62,11 @@
       align-items: center;
       text-align: center;
       padding: 0 10%;
+      background: radial-gradient(circle at top, #0B1220, #070A12);
     }
 
-    .hero h2 {
-      font-size: 52px;
+    .hero h1 {
+      font-size: 54px;
       font-weight: 700;
       background: linear-gradient(90deg, #38bdf8, #a78bfa);
       -webkit-background-clip: text;
@@ -74,120 +75,121 @@
 
     .hero p {
       margin-top: 15px;
-      color: #94a3b8;
-      max-width: 600px;
+      max-width: 650px;
+      color: #9CA3AF;
     }
 
-    .buttons {
+    .cta {
       margin-top: 25px;
+      display: flex;
+      gap: 10px;
     }
 
     .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      margin: 5px;
-      border-radius: 8px;
+      padding: 12px 20px;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
-      transition: 0.3s;
+      font-size: 14px;
     }
 
-    .btn-primary {
+    .primary {
       background: #38bdf8;
       color: black;
     }
 
-    .btn-primary:hover {
-      background: #0ea5e9;
-    }
-
-    .btn-outline {
+    .secondary {
       border: 1px solid #38bdf8;
       color: #38bdf8;
     }
 
-    .btn-outline:hover {
-      background: #38bdf8;
-      color: black;
-    }
-
     /* SECTIONS */
     section {
-      padding: 100px 10%;
+      padding: 90px 10%;
     }
 
     .title {
-      font-size: 28px;
       text-align: center;
+      font-size: 28px;
       margin-bottom: 40px;
       color: #38bdf8;
     }
 
-    /* SERVICES */
+    /* GRID */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
 
     .card {
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
       padding: 25px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
       transition: 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
       border-color: #38bdf8;
     }
 
     /* PORTFOLIO */
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
     .project {
       height: 160px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border-radius: 14px;
+      background: linear-gradient(135deg, #111827, #0B1220);
+      border: 1px solid rgba(255,255,255,0.05);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #94a3b8;
-      border: 1px solid rgba(255,255,255,0.08);
+      color: #6B7280;
     }
 
     /* CONTACT */
-    .contact {
-      text-align: center;
+    .contact-box {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    .contact p {
-      color: #94a3b8;
-      margin-bottom: 20px;
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.02);
+      color: white;
+      outline: none;
+    }
+
+    button {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      background: #38bdf8;
+      font-weight: 700;
+      cursor: pointer;
     }
 
     /* FOOTER */
     footer {
       text-align: center;
       padding: 30px;
-      color: #64748b;
-      font-size: 13px;
       border-top: 1px solid rgba(255,255,255,0.05);
+      color: #6B7280;
     }
 
     /* WHATSAPP */
-    .whatsapp {
+    .wa {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background: #25D366;
       color: white;
-      padding: 12px 15px;
+      padding: 12px 14px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
@@ -198,71 +200,65 @@
 
 <body>
 
-<header>
-  <h1>Dream Wave</h1>
-  <nav>
+<div class="nav">
+  <div class="logo">Dream Wave</div>
+  <div>
     <a href="#services">Services</a>
-    <a href="#portfolio">Work</a>
+    <a href="#work">Work</a>
     <a href="#contact">Contact</a>
-  </nav>
-</header>
+  </div>
+</div>
 
-<!-- HERO -->
 <section class="hero">
-  <h2>We Build Digital Products That Scale</h2>
-  <p>Web development, mobile apps, video ads, and digital growth systems for modern businesses.</p>
-  <div class="buttons">
-    <a href="#contact" class="btn btn-primary">Start a Project</a>
-    <a href="#portfolio" class="btn btn-outline">View Work</a>
+  <h1>We Build High-Performance Digital Products</h1>
+  <p>Modern websites, mobile apps, and growth systems designed to help businesses scale faster online.</p>
+
+  <div class="cta">
+    <a href="#contact" class="btn primary">Start Project</a>
+    <a href="#work" class="btn secondary">View Work</a>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
-  <div class="title">Our Services</div>
+  <div class="title">Services</div>
   <div class="grid">
-    <div class="card">⚡ Modern Website Development</div>
-    <div class="card">📱 Mobile App Development</div>
-    <div class="card">🎬 High-Converting Video Ads</div>
-    <div class="card">📈 Social Media Growth Systems</div>
+    <div class="card">⚡ Web Development</div>
+    <div class="card">📱 Mobile Apps</div>
+    <div class="card">🎬 Video Ads</div>
+    <div class="card">📈 Marketing Systems</div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <div class="title">Recent Work</div>
-  <div class="portfolio">
-    <div class="project">E-commerce Website</div>
-    <div class="project">Real Estate Platform</div>
-    <div class="project">Business Landing Page</div>
-    <div class="project">Mobile App UI</div>
+<section id="work">
+  <div class="title">Work</div>
+  <div class="grid">
+    <div class="project">E-commerce Platform</div>
+    <div class="project">Real Estate System</div>
+    <div class="project">Landing Page</div>
+    <div class="project">Mobile UI</div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <div class="title">Start Your Project</div>
-  <p>Tell us what you want to build. We respond within 24 hours.</p>
+<section id="contact">
+  <div class="title">Contact</div>
 
-<form action="https://formsubmit.co/dreamwavesolutions@gmail.com" method="POST" style="max-width:500px;margin:auto;display:flex;flex-direction:column;gap:10px;">    <input type="text" placeholder="Your Name" style="padding:12px;border-radius:8px;border:none;">
-  <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="New Project Request - Dream Wave Solutions">
-    <input type="email" placeholder="Your Email" style="padding:12px;border-radius:8px;border:none;">
-    <textarea placeholder="Your Project Idea" rows="5" style="padding:12px;border-radius:8px;border:none;"></textarea>
+  <form class="contact-box" action="https://formsubmit.co/dreamwavesolutions@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Client Request">
 
-    <button type="submit" style="padding:12px;border-radius:8px;border:none;background:#38bdf8;font-weight:bold;cursor:pointer;">
-      Send Request
-    </button>
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
+
+    <button type="submit">Send Message</button>
   </form>
 </section>
 
 <footer>
-  © 2026 Dream Wave Solutions — All Rights Reserved
+  © 2026 Dream Wave Solutions
 </footer>
 
-<a class="whatsapp" href="https://wa.me/216XXXXXXXX" target="_blank">
-  WhatsApp
-</a>
+<a class="wa" href="https://wa.me/216XXXXXXXX">WhatsApp</a>
 
 </body>
 </html>
