@@ -52,6 +52,46 @@
     .nav a:hover {
       color: #38bdf8;
     }
+    /* GRID */
+
+.hero-grid{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+
+background-size:60px 60px;
+
+mask-image:radial-gradient(circle,#fff 20%,transparent 90%);
+
+opacity:.35;
+
+pointer-events:none;
+
+animation:gridMove 25s linear infinite;
+
+}
+
+@keyframes gridMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(60px);
+
+}
+
+}
 
     /* HERO */
    .hero{
