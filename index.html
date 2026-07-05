@@ -438,6 +438,16 @@ transform:translateY(0px) translateX(0px);
 </footer>
 
 <a class="wa" href="https://wa.me/216XXXXXXXX">WhatsApp</a>
+  <script>
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".nav");
+  if(window.scrollY > 20){
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
+</script>
 
 </body>
 </html>
