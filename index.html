@@ -113,13 +113,35 @@ transform:translateY(60px);
         radial-gradient(circle at top,#14213D 0%,#090B14 55%,#05070F 100%);
 }
 
-    .hero h1 {
-      font-size: 54px;
-      font-weight: 700;
-      background: linear-gradient(90deg, #38bdf8, #a78bfa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+    .hero h1{
+
+font-size:68px;
+
+font-weight:800;
+
+line-height:1.05;
+
+max-width:950px;
+
+background:linear-gradient(
+90deg,
+#ffffff,
+#60a5fa,
+#a78bfa);
+
+background-size:300%;
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+animation:
+
+gradientText 6s linear infinite,
+
+fadeUp 1.2s ease;
+
+}
 
     .hero p {
       margin-top: 15px;
