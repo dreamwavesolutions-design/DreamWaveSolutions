@@ -143,11 +143,55 @@ fadeUp 1.2s ease;
 
 }
 
-    .hero p {
-      margin-top: 15px;
-      max-width: 650px;
-      color: #9CA3AF;
-    }
+   .hero p{
+
+opacity:0;
+
+max-width:700px;
+
+margin-top:25px;
+
+font-size:19px;
+
+color:#94a3b8;
+
+animation:fadeUp 1.2s ease forwards;
+
+animation-delay:.4s;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes gradientText{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:300%;
+}
+
+}
 
     .cta {
       margin-top: 25px;
