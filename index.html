@@ -181,6 +181,16 @@ background-position:300%;
 }
 
 }
+    .reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
 
     .cta {
       margin-top: 25px;
@@ -465,6 +475,24 @@ window.addEventListener("scroll", () => {
   } else {
     nav.classList.remove("scrolled");
   }
+});
+</script>
+  <script>
+const elements = document.querySelectorAll("section, .card, .project");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+elements.forEach(el => {
+  el.classList.add("reveal");
+  observer.observe(el);
 });
 </script>
 
