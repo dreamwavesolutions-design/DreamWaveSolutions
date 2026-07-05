@@ -45,6 +45,34 @@
   font-size:40px;
   color:#38bdf8;
 }
+    .project{
+  height:160px;
+  border-radius:16px;
+
+  background:linear-gradient(135deg,#111827,#0B1220);
+  border:1px solid rgba(255,255,255,0.05);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#6B7280;
+
+  transition:0.25s ease;
+
+  transform-style:preserve-3d;
+}
+
+.project:hover{
+  transform:
+    perspective(800px)
+    rotateX(6deg)
+    rotateY(-6deg)
+    translateY(-6px);
+
+  border-color:#38bdf8;
+  box-shadow:0 20px 40px rgba(56,189,248,0.15);
+}
     /* NAV */
   .nav{
   position:fixed;
