@@ -22,19 +22,32 @@
     }
 
     /* NAV */
-    .nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 18px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(10, 12, 20, 0.6);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      z-index: 1000;
-    }
+  .nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:18px 10%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  background:rgba(10, 12, 20, 0.35);
+  backdrop-filter:blur(18px);
+
+  border-bottom:1px solid rgba(255,255,255,0.06);
+
+  z-index:1000;
+
+  transition:0.3s ease;
+}
+
+/* when scrolling effect */
+.nav.scrolled{
+  background:rgba(10, 12, 20, 0.75);
+  border-bottom:1px solid rgba(56,189,248,0.2);
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
     .logo {
       font-weight: 700;
