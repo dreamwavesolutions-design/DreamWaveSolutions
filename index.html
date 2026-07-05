@@ -202,6 +202,70 @@
       text-decoration: none;
       font-weight: 600;
     }
+    /* ===========================
+   FLOATING LIGHT ORBS
+=========================== */
+
+.hero::before,
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(120px);
+
+opacity:.55;
+
+animation:float 14s ease-in-out infinite;
+
+pointer-events:none;
+
+}
+
+.hero::before{
+
+width:420px;
+height:420px;
+
+background:#2563eb;
+
+top:-120px;
+left:-120px;
+
+}
+
+.hero::after{
+
+width:340px;
+height:340px;
+
+background:#7c3aed;
+
+bottom:-120px;
+right:-100px;
+
+animation-delay:6s;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px) translateX(0px);
+}
+
+50%{
+transform:translateY(40px) translateX(30px);
+}
+
+100%{
+transform:translateY(0px) translateX(0px);
+}
+
+}
 
   </style>
 </head>
