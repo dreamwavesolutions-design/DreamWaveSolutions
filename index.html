@@ -20,7 +20,31 @@
       color: #E5E7EB;
       line-height: 1.6;
     }
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  padding:80px 10%;
+  text-align:center;
+}
 
+.stat{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.05);
+  padding:30px;
+  border-radius:16px;
+  transition:0.3s;
+}
+
+.stat:hover{
+  transform:translateY(-6px);
+  border-color:#38bdf8;
+}
+
+.stat h2{
+  font-size:40px;
+  color:#38bdf8;
+}
     /* NAV */
   .nav{
   position:fixed;
