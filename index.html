@@ -428,19 +428,15 @@ animation-delay:6s;
 }
 
 @keyframes float{
-
-0%{
-transform:translateY(0px) translateX(0px);
-}
-
-50%{
-transform:translateY(40px) translateX(30px);
-}
-
-100%{
-transform:translateY(0px) translateX(0px);
-}
-
+  0%{
+    transform:translate3d(0,0,0) scale(1);
+  }
+  50%{
+    transform:translate3d(30px, -40px, 0) scale(1.05);
+  }
+  100%{
+    transform:translate3d(0,0,0) scale(1);
+  }
 }
     @keyframes gradientMove {
   0% {
