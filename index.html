@@ -45,33 +45,151 @@
   font-size:40px;
   color:#38bdf8;
 }
-    .project{
-  height:160px;
-  border-radius:16px;
+   /* =====================
+   PROJECT CARDS
+===================== */
 
-  background:linear-gradient(135deg,#111827,#0B1220);
-  border:1px solid rgba(255,255,255,0.05);
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.projects{
 
-  color:#6B7280;
+display:grid;
 
-  transition:0.25s ease;
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
 
-  transform-style:preserve-3d;
+gap:30px;
+
 }
 
-.project:hover{
-  transform:
-    perspective(800px)
-    rotateX(6deg)
-    rotateY(-6deg)
-    translateY(-6px);
 
-  border-color:#38bdf8;
-  box-shadow:0 20px 40px rgba(56,189,248,0.15);
+.project-card{
+
+background:
+rgba(255,255,255,0.04);
+
+border:
+1px solid rgba(255,255,255,0.08);
+
+border-radius:20px;
+
+overflow:hidden;
+
+transition:.4s;
+
+}
+
+
+.project-card:hover{
+
+transform:
+translateY(-12px);
+
+border-color:#38bdf8;
+
+box-shadow:
+0 25px 60px rgba(56,189,248,.15);
+
+}
+
+
+
+.project-image{
+
+height:200px;
+
+background-size:cover;
+
+background-position:center;
+
+position:relative;
+
+}
+
+
+
+/* Temporary premium gradients
+   later we replace with screenshots */
+
+
+.ecommerce{
+
+background:
+linear-gradient(135deg,#2563eb,#06b6d4);
+
+}
+
+
+.realestate{
+
+background:
+linear-gradient(135deg,#7c3aed,#ec4899);
+
+}
+
+
+.mobile{
+
+background:
+linear-gradient(135deg,#059669,#14b8a6);
+
+}
+
+
+
+.project-content{
+
+padding:25px;
+
+}
+
+
+.project-content h3{
+
+font-size:22px;
+
+margin-bottom:10px;
+
+color:white;
+
+}
+
+
+.project-content p{
+
+color:#94a3b8;
+
+font-size:14px;
+
+}
+
+
+
+.tags{
+
+display:flex;
+
+gap:8px;
+
+margin-top:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+.tags span{
+
+padding:5px 12px;
+
+border-radius:20px;
+
+font-size:12px;
+
+background:
+rgba(56,189,248,.12);
+
+color:#38bdf8;
+
 }
     /* NAV */
   .nav{
