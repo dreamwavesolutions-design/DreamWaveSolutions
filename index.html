@@ -1,1385 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dream Wave Solutions</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream Wave Solutions</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-/* ==========================
-   PROCESS TIMELINE
-========================== */
-
-
-.timeline{
-
-max-width:900px;
-
-margin:auto;
-
-position:relative;
-
-}
-
-
-.timeline::before{
-
-content:"";
-
-position:absolute;
-
-left:35px;
-
-top:0;
-
-width:2px;
-
-height:100%;
-
-background:
-
-linear-gradient(
-#38bdf8,
-transparent
-);
-
-}
-
-
-
-.step{
-
-display:flex;
-
-gap:35px;
-
-margin-bottom:50px;
-
-position:relative;
-
-}
-
-
-
-.number{
-
-width:70px;
-
-height:70px;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-
-background:
-
-linear-gradient(
-135deg,
-#38bdf8,
-#6366f1
-);
-
-
-color:#020617;
-
-font-weight:800;
-
-font-size:20px;
-
-
-box-shadow:
-
-0 0 30px
-rgba(56,189,248,.4);
-
-
-z-index:2;
-
-}
-
-
-
-.step-content{
-
-flex:1;
-
-
-background:
-
-rgba(255,255,255,.04);
-
-
-border:
-
-1px solid rgba(255,255,255,.08);
-
-
-padding:25px;
-
-
-border-radius:18px;
-
-
-transition:.4s;
-
-
-}
-
-
-
-.step-content:hover{
-
-transform:translateX(10px);
-
-
-border-color:#38bdf8;
-
-
-box-shadow:
-
-0 20px 50px
-rgba(56,189,248,.15);
-
-
-}
-
-
-
-.step-content h3{
-
-font-size:22px;
-
-margin-bottom:10px;
-
-color:white;
-
-}
-
-
-
-.step-content p{
-
-color:#94a3b8;
-
-}
-    body {
-      background: #070A12;
-      color: #E5E7EB;
-      line-height: 1.6;
-    }
-.stats{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
-  padding:80px 10%;
-  text-align:center;
-}
-
-.stat{
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.05);
-  padding:30px;
-  border-radius:16px;
-  transition:0.3s;
-}
-
-.stat:hover{
-  transform:translateY(-6px);
-  border-color:#38bdf8;
-}
-
-.stat h2{
-  font-size:40px;
-  color:#38bdf8;
-}
-   /* =====================
-   PROJECT CARDS
-===================== */
-
-
-.projects{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
-
-gap:30px;
-
-}
-
-
-.project-card{
-
-background:
-rgba(255,255,255,0.04);
-
-border:
-1px solid rgba(255,255,255,0.08);
-
-border-radius:20px;
-
-overflow:hidden;
-
-transition:.4s;
-
-}
-
-
-.project-card{
-
-position:relative;
-
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,0.08),
-rgba(255,255,255,0.02)
-);
-
-border:
-1px solid rgba(255,255,255,0.08);
-
-border-radius:22px;
-
-overflow:hidden;
-
-transition:.5s ease;
-
-backdrop-filter:blur(15px);
-
-}
-
-
-.project-card::before{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:
-linear-gradient(
-120deg,
-transparent,
-rgba(56,189,248,.25),
-transparent
-);
-
-transform:translateX(-100%);
-
-transition:.7s;
-
-}
-
-
-.project-card:hover::before{
-
-transform:translateX(100%);
-
-}
-
-
-.project-card:hover{
-
-transform:
-translateY(-15px)
-scale(1.02);
-
-border-color:#38bdf8;
-
-box-shadow:
-
-0 30px 80px
-rgba(56,189,248,.25);
-
-}.project-card{
-
-position:relative;
-
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,0.08),
-rgba(255,255,255,0.02)
-);
-
-border:
-1px solid rgba(255,255,255,0.08);
-
-border-radius:22px;
-
-overflow:hidden;
-
-transition:.5s ease;
-
-backdrop-filter:blur(15px);
-
-}
-
-
-.project-card::before{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:
-linear-gradient(
-120deg,
-transparent,
-rgba(56,189,248,.25),
-transparent
-);
-
-transform:translateX(-100%);
-
-transition:.7s;
-
-}
-
-
-.project-card:hover::before{
-
-transform:translateX(100%);
-
-}
-
-
-.project-card:hover{
-
-transform:
-translateY(-15px)
-scale(1.02);
-
-border-color:#38bdf8;
-
-box-shadow:
-
-0 30px 80px
-rgba(56,189,248,.25);
-
-}
-
-
-.project-image{
-
-height:220px;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-
-.project-image::after{
-
-content:"VIEW PROJECT";
-
-position:absolute;
-
-inset:0;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-background:
-rgba(5,7,18,.75);
-
-color:white;
-
-font-weight:700;
-
-letter-spacing:2px;
-
-opacity:0;
-
-transition:.4s;
-
-}
-
-
-.project-card:hover .project-image::after{
-
-opacity:1;
-
-}
-
-
-
-/* Temporary premium gradients
-   later we replace with screenshots */
-
-
-.ecommerce{
-
-background:
-linear-gradient(135deg,#2563eb,#06b6d4);
-
-}
-
-
-.realestate{
-
-background:
-linear-gradient(135deg,#7c3aed,#ec4899);
-
-}
-
-
-.mobile{
-
-background:
-linear-gradient(135deg,#059669,#14b8a6);
-
-}
-
-
-
-.project-content{
-
-padding:25px;
-
-}
-
-
-.project-content h3{
-
-font-size:22px;
-
-margin-bottom:10px;
-
-color:white;
-
-}
-
-
-.project-content p{
-
-color:#94a3b8;
-
-font-size:14px;
-
-}
-
-
-
-.tags{
-
-display:flex;
-
-gap:8px;
-
-margin-top:20px;
-
-flex-wrap:wrap;
-
-}
-
-
-.tags span{
-
-padding:6px 14px;
-
-border-radius:30px;
-
-font-size:12px;
-
-background:
-rgba(56,189,248,.1);
-
-border:
-1px solid rgba(56,189,248,.25);
-
-color:#7dd3fc;
-
-transition:.3s;
-
-}
-
-
-.tags span:hover{
-
-background:#38bdf8;
-
-color:#020617;
-
-}
-    /* NAV */
-  .nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  padding:18px 10%;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  background:rgba(10, 12, 20, 0.35);
-  backdrop-filter:blur(18px);
-
-  border-bottom:1px solid rgba(255,255,255,0.06);
-
-  z-index:1000;
-
-  transition:0.3s ease;
-}
-
-/* when scrolling effect */
-.nav.scrolled{
-  background:rgba(10, 12, 20, 0.75);
-  border-bottom:1px solid rgba(56,189,248,0.2);
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
-}
-
-    .logo {
-      font-weight: 700;
-      color: #38bdf8;
-      letter-spacing: 1px;
-    }
-
-    .nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #9CA3AF;
-      font-size: 14px;
-    }
-
-    .nav a:hover {
-      color: #38bdf8;
-    }
-    /* GRID */
-
-.hero-grid{
-
-position:absolute;
-
-inset:0;
-
-background-image:
-
-linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
-linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
-
-background-size:60px 60px;
-
-mask-image:radial-gradient(circle,#fff 20%,transparent 90%);
-
-opacity:.35;
-
-pointer-events:none;
-
-animation:gridMove 25s linear infinite;
-
-}
-
-@keyframes gridMove{
-
-from{
-
-transform:translateY(0);
-
-}
-
-to{
-
-transform:translateY(60px);
-
-}
-
-}
-
-    /* HERO */
-   .hero{
-    position:relative;
-    min-height:100vh;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    overflow:hidden;
-
-    padding:0 10%;
-
-    background:
-        radial-gradient(circle at top,#14213D 0%,#090B14 55%,#05070F 100%);
-}
-
-.hero h1 {
-  font-size: 68px;
-  font-weight: 800;
-  line-height: 1.05;
-  max-width: 950px;
-
-  background: linear-gradient(90deg, #ffffff, #60a5fa, #a78bfa);
-  background-size: 300% 100%;
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: fadeUp 1.2s ease forwards, gradientMove 6s ease infinite;
-}
-
-   .hero p{
-
-opacity:0;
-
-max-width:700px;
-
-margin-top:25px;
-
-font-size:19px;
-
-color:#94a3b8;
-
-animation:fadeUp 1.2s ease forwards;
-
-animation-delay:.4s;
-
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes gradientText{
-
-0%{
-background-position:0%;
-}
-
-100%{
-background-position:300%;
-}
-
-}
-    .reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 0.8s ease;
-}
-
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
-}
-
-    .cta {
-      margin-top: 25px;
-      display: flex;
-      gap: 10px;
-    }
-
-   .btn{
-  padding:12px 22px;
-  border-radius:12px;
-  font-weight:600;
-  font-size:14px;
-  text-decoration:none;
-
-  transition:0.25s ease;
-  position:relative;
-
-  overflow:hidden;
-}
-
-/* PRIMARY */
-.primary{
-  background:linear-gradient(135deg,#38bdf8,#6366f1);
-  color:black;
-  box-shadow:0 10px 30px rgba(56,189,248,0.25);
-}
-
-.primary:hover{
-  transform:translateY(-3px) scale(1.03);
-  box-shadow:0 15px 40px rgba(56,189,248,0.35);
-}
-
-/* SECONDARY */
-.secondary{
-  border:1px solid rgba(56,189,248,0.6);
-  color:#38bdf8;
-  background:rgba(56,189,248,0.05);
-}
-
-.secondary:hover{
-  transform:translateY(-3px);
-  background:rgba(56,189,248,0.15);
-}
-
-    /* SECTIONS */
-    section {
-      padding: 90px 10%;
-    }
-
-    .title {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 40px;
-      color: #38bdf8;
-    }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-    
-.card{
-    position:relative;
-    overflow:hidden;
-
-    padding:35px;
-
-    border-radius:20px;
-
-    background:linear-gradient(
-        145deg,
-        rgba(255,255,255,.06),
-        rgba(255,255,255,.02)
-    );
-
-    border:1px solid rgba(255,255,255,.08);
-
-    transition:.4s ease;
-
-    backdrop-filter:blur(15px);
-}
-
-.card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-left:-120%;
-
-width:70%;
-height:100%;
-
-background:linear-gradient(
-90deg,
-transparent,
-rgba(255,255,255,.12),
-transparent);
-
-transform:skewX(-20deg);
-
-transition:.8s;
-
-}
-
-.card:hover::before{
-
-left:150%;
-
-}
-
-.card:hover{
-
-transform:translateY(-12px);
-
-border-color:#38bdf8;
-
-box-shadow:0 20px 60px rgba(56,189,248,.18);
-
-}
-
-.card h3{
-
-margin-bottom:18px;
-
-font-size:22px;
-
-color:white;
-
-}
-
-.card p{
-
-color:#94a3b8;
-
-line-height:1.8;
-
-}
-
-    /* PORTFOLIO */
-    .project {
-      height: 160px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #111827, #0B1220);
-      border: 1px solid rgba(255,255,255,0.05);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #6B7280;
-    }
-
-    /* CONTACT */
-    .contact-box {
-      max-width: 600px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    input, textarea {
-      padding: 12px;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.02);
-      color: white;
-      outline: none;
-    }
-
-    button {
-      padding: 12px;
-      border-radius: 10px;
-      border: none;
-      background: #38bdf8;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 30px;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      color: #6B7280;
-    }
-
-    /* WHATSAPP */
-    .wa {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 12px 14px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    /* ===========================
-   FLOATING LIGHT ORBS
-=========================== */
-
-.hero::before,
-.hero::after{
-
-content:"";
-
-position:absolute;
-
-border-radius:50%;
-
-filter:blur(120px);
-
-opacity:.55;
-
-animation:float 14s ease-in-out infinite;
-
-pointer-events:none;
-
-}
-
-.hero::before{
-
-width:420px;
-height:420px;
-
-background:#2563eb;
-
-top:-120px;
-left:-120px;
-
-}
-
-.hero::after{
-
-width:340px;
-height:340px;
-
-background:#7c3aed;
-
-bottom:-120px;
-right:-100px;
-
-animation-delay:6s;
-
-}
-
-@keyframes float{
-  0%{
-    transform:translate3d(0,0,0) scale(1);
-  }
-  50%{
-    transform:translate3d(30px, -40px, 0) scale(1.05);
-  }
-  100%{
-    transform:translate3d(0,0,0) scale(1);
-  }
-}
-    @keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-  </style>
 </head>
 
 <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-glow"></div>
+    <div class="blur blur1"></div>
+    <div class="blur blur2"></div>
 
-<div class="nav">
-  <div class="logo">Dream Wave</div>
-  <div>
-    <a href="#solutions">Solutions</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-  </div>
-</div>
-
-<section class="hero">
-  <div class="hero-grid"></div>
-  <h1>Building Digital Experiences That Drive Business Growth</h1>
-  <p>Dream Wave Solutions designs high-performance websites, custom software, mobile applications, AI-powered automation, and creative digital experiences that help ambitious businesses grow faster.</p>
-
-  <div class="cta">
-    <a href="#contact" class="btn primary">Book a Free Consultation</a>
-    <a href="#portfolio" class="btn secondary">View Portfolio</a>
-  </div>
-</section>
-  <section id="about">
-
-<h2>Who We Are</h2>
-
-<p>
-Dream Wave Solutions is a digital technology company helping businesses grow through modern websites, custom software, AI-powered automation, mobile applications, and creative digital solutions. We combine strategy, design, and technology to build experiences that create measurable business results.
-</p>
-
-</section>
-  <section class="stats">
-
-  <div class="stat">
-    <h2 class="count" data-target="40">10</h2>
-    <p>Projects Completed</p>
-  </div>
-
-  <div class="stat">
-    <h2 class="count" data-target="100">90</h2>
-    <p>Client Satisfaction %</p>
-  </div>
-
-  <div class="stat">
-    <h2 class="count" data-target="10">8</h2>
-    <p>Years Experience</p>
-  </div>
-
-  <div class="stat">
-    <h2 class="count" data-target="24">24</h2>
-    <p>Support / 7</p>
-  </div>
-
-</section>
-
-<section id="solutions">
-    <div class="title">
-        Solutions we deliver
+    <div class="nav">
+        <div class="logo">
+            <span>Dream Wave</span> Solutions
+        </div>
+        <div>
+            <a href="solutions.html" data-section="solutions">Solutions</a>
+            <a href="projects.html" data-section="work">Projects</a>
+            <a href="process.html" data-section="process">Process</a>
+            <a href="about.html" data-section="why">about</a>
+            <a href="contact.html" data-section="contact">Contact</a>
+        </div>
+        <div class="scroll-progress"></div>
     </div>
 
-    <p class="section-subtitle">
-        We build modern digital solutions that help businesses launch, grow, and scale.
-        <br>
-    </p>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-grid"></div>
 
+            <div class="hero-badge">
 
-    <div class="grid">
+                AI • SOFTWARE • WEB • MOBILE
 
-    <div class="card">
+            </div>
+            <h1>Building Digital Experiences That Drive Business Growth</h1>
+            <p>Dream Wave Solutions designs high-performance websites, custom software, mobile applications, AI-powered automation, and creative digital experiences that help ambitious businesses grow faster.</p>
 
-        <h3>Launch Your Business Online</h3>
-        <div class="icon">🚀</div>
+            <div class="cta">
+                <a href="contact.html" class="btn primary">Book a Free Consultation</a>
+                <a href="projects.html" class="btn secondary">View Portfolio</a>
+            </div>
+            <div class="trust">
 
-        <p>
-            Professional websites and digital branding designed to help businesses establish a strong online presence and attract more customers.
+                ✔ Modern Technology ✔ Fast Delivery ✔ Long-Term Support
+
+            </div>
+
+        </div>
+        <div class="hero-visual">
+
+            <div class="laptop">
+
+                <div class="screen">
+
+                    <div class="screen-glow"></div>
+                    <img src="assets/images/Dream_Wave.png" alt="Dream Wave Solutions" class="laptop-screen-image">
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="stats">
+
+        <div class="stat">
+            <h2 class="count" data-target="40">10</h2>
+            <p>Projects Delivered</p>
+        </div>
+
+        <div class="stat">
+            <h2 class="count" data-target="100">90</h2>
+            <p>Client Satisfaction %</p>
+        </div>
+
+        <div class="stat">
+            <h2 class="count" data-target="8">8</h2>
+            <p>Years Experience</p>
+        </div>
+
+        <div class="stat">
+            <h2 class="count" data-target="24">24</h2>
+            <p>Support / 7</p>
+        </div>
+
+    </section>
+
+    <section id="solutions">
+        <div class="title">
+            Solutions we deliver
+        </div>
+
+        <p class="section-subtitle">
+            We build modern digital solutions that help businesses launch, grow, and scale.
+            <br>
+            <br>
         </p>
 
-        <ul>
-            <li>✔ Business Websites</li>
-            <li>✔ Landing Pages</li>
-            <li>✔ Branding</li>
-            <li>✔ Mobile Responsive</li>
-        </ul>
-    </div>
 
-    <div class="card">
+        <div class="grid">
 
-        <h3>Grow Your Business</h3>
-        <div class="icon">📈</div>
+            <div class="card">
+
+                <h3>Launch Your Business Online</h3>
+                <div class="icon">🚀</div>
+
+                <p>
+                    Professional websites and digital branding designed to help businesses establish a strong online presence and attract more customers.
+                </p>
+
+                <ul>
+                    <li>✔ Business Websites</li>
+                    <li>✔ Landing Pages</li>
+                    <li>✔ Branding</li>
+                    <li>✔ Mobile Responsive</li>
+                </ul>
+            </div>
+
+            <div class="card">
+
+                <h3>Grow Your Business</h3>
+                <div class="icon">📈</div>
+
+                <p>
+                    Improve your existing website and digital presence to generate more leads, build trust, and increase conversions.
+                </p>
+
+                <ul>
+                    <li>✔ Website Redesign</li>
+                    <li>✔ SEO Optimization</li>
+                    <li>✔ Performance</li>
+                    <li>✔ Analytics</li>
+                </ul>
+            </div>
+
+            <div class="card">
+
+                <h3>AI & Automation</h3>
+                <div class="icon">🤖</div>
+
+                <p>
+                    Automate repetitive tasks and improve customer experience using modern AI-powered business solutions.
+                </p>
+
+                <ul>
+                    <li>✔ AI Chatbots</li>
+                    <li>✔ Workflow Automation</li>
+                    <li>✔ Appointment Systems</li>
+                    <li>✔ CRM Integration</li>
+                </ul>
+            </div>
+
+            <div class="card">
+
+                <h3>Custom Software</h3>
+                <div class="icon">💻</div>
+
+
+                <p>
+                    Custom web applications and business systems built specifically for your company's workflow and growth.
+                </p>
+
+                <ul>
+                    <li>✔ Dashboards</li>
+                    <li>✔ Admin Systems</li>
+                    <li>✔ Web Applications</li>
+                    <li>✔ Business Tools</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+    <section id="work">
+
+        <div class="title">
+            Featured Projects
+        </div>
+
+
+        <div class="projects">
+
+
+            <div class="project-card">
+
+                <div class="project-image ecommerce">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>E-Commerce Platform</h3>
+
+                    <p>
+                        A modern online store experience designed for speed, conversions, and customer growth.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-card">
+
+                <div class="project-image realestate">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Real Estate System</h3>
+
+                    <p>
+                        A complete digital platform helping agencies manage properties and clients.
+                    </p>
+
+                    <div class="tags">
+                        <span>Web App</span>
+                        <span>Database</span>
+                        <span>UI/UX</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-card">
+
+                <div class="project-image mobile">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Mobile Application</h3>
+
+                    <p>
+                        Beautiful mobile experiences focused on performance and usability.
+                    </p>
+
+                    <div class="tags">
+                        <span>Android</span>
+                        <span>Design</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section id="why">
+
+        <div class="title">
+            Why Choose Dream Wave
+        </div>
+
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>⚡ Modern Technology</h3>
+
+                <p>
+                    We use modern development practices and tools to create fast, scalable, and reliable solutions.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🎯 Business Focused</h3>
+
+                <p>
+                    We don't just build software. We create digital solutions designed to help businesses grow.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🤖 Future Ready</h3>
+
+                <p>
+                    From AI automation to custom software, we help businesses prepare for tomorrow.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🤝 Long-Term Partnership</h3>
+
+                <p>
+                    We work with clients beyond launch to improve, maintain, and evolve their digital presence.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+    <section id="process">
+
+        <div class="title">
+            Our Process
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="step">
+
+                <div class="number">
+                    01
+                </div>
+
+                <div class="step-content">
+
+                    <h3>Discovery</h3>
+
+                    <p>
+                        We analyze your goals, your audience, and your business needs to create the right strategy.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="step">
+
+                <div class="number">
+                    02
+                </div>
+
+                <div class="step-content">
+
+                    <h3>Design</h3>
+
+                    <p>
+                        We create modern interfaces and experiences focused on usability and conversions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="step">
+
+                <div class="number">
+                    03
+                </div>
+
+                <div class="step-content">
+
+                    <h3>Development</h3>
+
+                    <p>
+                        We transform designs into fast, secure, and scalable digital products.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="step">
+
+                <div class="number">
+                    04
+                </div>
+
+                <div class="step-content">
+
+                    <h3>Launch & Growth</h3>
+
+                    <p>
+                        We deploy your project and help you improve your digital presence.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <section class="cta-section">
+
+        <h2>
+            Ready to Build Something Amazing?
+        </h2>
 
         <p>
-            Improve your existing website and digital presence to generate more leads, build trust, and increase conversions.
+            Tell us about your idea and let's transform it into a digital solution.
         </p>
 
-        <ul>
-            <li>✔ Website Redesign</li>
-            <li>✔ SEO Optimization</li>
-            <li>✔ Performance</li>
-            <li>✔ Analytics</li>
-        </ul>
-    </div>
+        <a href="#contact" class="btn primary">
+        Start Your Project
+        </a>
 
-    <div class="card">
+    </section>
 
-        <h3>AI & Automation</h3>
-        <div class="icon">🤖</div>
 
-        <p>
-            Automate repetitive tasks and improve customer experience using modern AI-powered business solutions.
-        </p>
 
-        <ul>
-            <li>✔ AI Chatbots</li>
-            <li>✔ Workflow Automation</li>
-            <li>✔ Appointment Systems</li>
-            <li>✔ CRM Integration</li>
-        </ul>
-    </div>
+    <section id="contact">
+        <div class="title">Contact</div>
 
-    <div class="card">
+        <form class="contact-box" action="https://formsubmit.co/dreamwavesolutions@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Client Request">
 
-        <h3>Custom Software</h3>
-              <div class="icon">💻</div>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
 
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-        <p>
-            Custom web applications and business systems built specifically for your company's workflow and growth.
-        </p>
+    <footer class="footer">
 
-        <ul>
-            <li>✔ Dashboards</li>
-            <li>✔ Admin Systems</li>
-            <li>✔ Web Applications</li>
-            <li>✔ Business Tools</li>
-        </ul>
-    </div>
+        <div class="footer-grid">
 
-</div>
+            <div>
 
-</section>
-<section id="process">
+                <h2>Dream Wave Solutions</h2>
 
-  <div class="title">
-    Our Process
-  </div>
+                <p>
+                    Building modern websites, software, AI solutions and digital experiences for ambitious businesses.
+                </p>
 
+            </div>
 
-  <div class="timeline">
 
+            <div>
 
-    <div class="step">
+                <h3>Company</h3>
 
-      <div class="number">
-        01
-      </div>
+                <a href="#">About</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contact</a>
 
-      <div class="step-content">
+            </div>
 
-        <h3>Discovery</h3>
 
-        <p>
-        We analyze your goals, your audience,
-        and your business needs to create the right strategy.
-        </p>
+            <div>
 
-      </div>
+                <h3>Solutions</h3>
 
-    </div>
+                <a href="#">Web Development</a>
+                <a href="#">Mobile Apps</a>
+                <a href="#">AI Automation</a>
 
+            </div>
 
 
-    <div class="step">
+            <div>
 
-      <div class="number">
-        02
-      </div>
+                <h3>Get In Touch</h3>
 
-      <div class="step-content">
+                <p>dream.wave.development@gmail.com </p>
 
-        <h3>Design</h3>
+                <p>Tunisia</p>
 
-        <p>
-        We create modern interfaces and experiences
-        focused on usability and conversions.
-        </p>
+            </div>
 
-      </div>
+        </div>
 
-    </div>
+        <div class="copyright">
 
+            © 2019 Dream Wave Solutions. All Rights Reserved.
 
+        </div>
 
-    <div class="step">
+    </footer>
 
-      <div class="number">
-        03
-      </div>
-
-      <div class="step-content">
-
-        <h3>Development</h3>
-
-        <p>
-        We transform designs into fast,
-        secure, and scalable digital products.
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="step">
-
-      <div class="number">
-        04
-      </div>
-
-      <div class="step-content">
-
-        <h3>Launch & Growth</h3>
-
-        <p>
-        We deploy your project and help you
-        improve your digital presence.
-        </p>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-
-</section>
-<section id="work">
-
-<div class="title">
-Featured Projects
-</div>
-
-
-<div class="projects">
-
-
-<div class="project-card">
-
-<div class="project-image ecommerce">
-</div>
-
-<div class="project-content">
-
-<h3>E-Commerce Platform</h3>
-
-<p>
-A modern online store experience designed
-for speed, conversions, and customer growth.
-</p>
-
-<div class="tags">
-<span>HTML</span>
-<span>PHP</span>
-<span>MySQL</span>
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="project-card">
-
-<div class="project-image realestate">
-</div>
-
-<div class="project-content">
-
-<h3>Real Estate System</h3>
-
-<p>
-A complete digital platform helping agencies
-manage properties and clients.
-</p>
-
-<div class="tags">
-<span>Web App</span>
-<span>Database</span>
-<span>UI/UX</span>
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="project-card">
-
-<div class="project-image mobile">
-</div>
-
-<div class="project-content">
-
-<h3>Mobile Application</h3>
-
-<p>
-Beautiful mobile experiences focused on
-performance and usability.
-</p>
-
-<div class="tags">
-<span>Android</span>
-<span>Design</span>
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-<section id="contact">
-  <div class="title">Contact</div>
-
-  <form class="contact-box" action="https://formsubmit.co/dreamwavesolutions@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="New Client Request">
-
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
-
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-<footer>
-  © 2026 Dream Wave Solutions
-</footer>
-
-<a class="wa" href="https://wa.me/216XXXXXXXX">WhatsApp</a>
-  <script>
-window.addEventListener("scroll", () => {
-  const nav = document.querySelector(".nav");
-  if(window.scrollY > 20){
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
-  }
-});
-</script>
-  <script>
-const elements = document.querySelectorAll("section, .card, .project");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("active");
-    }
-  });
-}, {
-  threshold: 0.1
-});
-
-elements.forEach(el => {
-  el.classList.add("reveal");
-  observer.observe(el);
-});
-</script>
-  <script>
-const counters = document.querySelectorAll('.count');
-
-const startCount = (counter) => {
-  const target = +counter.getAttribute('data-target');
-  let count = 0;
-
-  const speed = target / 60;
-
-  const update = () => {
-    count += speed;
-
-    if(count < target){
-      counter.innerText = Math.ceil(count);
-      requestAnimationFrame(update);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  update();
-};
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      startCount(entry.target);
-      observer.unobserve(entry.target);
-    }
-  });
-});
-
-counters.forEach(counter => observer.observe(counter));
-</script>
+    <a class="wa" href="https://wa.me/21654030445">WhatsApp</a>
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
