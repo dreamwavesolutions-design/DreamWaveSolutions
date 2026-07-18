@@ -123,21 +123,20 @@
 
 
             </div>
-            <form class="contact-form">
+            <section id="contact">
+                <div class="title">Contact</div>
 
-                <input type="text" placeholder="Your Name">
+                <form class="contact-box" action="https://formsubmit.co/dreamwavesolutions@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New Client Request">
 
-                <input type="email" placeholder="Your Email">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
 
-                <input type="text" placeholder="Project Type">
-
-                <textarea placeholder="Tell us about your project"></textarea>
-
-                <button class="btn">
-        Send Message
-        </button>
-
-            </form>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
 
         </div>
     </section>
